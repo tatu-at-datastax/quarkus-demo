@@ -36,5 +36,5 @@ import javax.ws.rs.core.MediaType;
                 }
         )
 )
-public class GreetingApp {
+public class GreetingApp extends javax.ws.rs.core.Application {
 }
