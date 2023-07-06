@@ -14,7 +14,7 @@ import org.eclipse.microprofile.openapi.annotations.responses.APIResponses;
 
 public interface GreetingResourceApi {
     @GET
-    public String hello();
+    String hello();
 
     @GET
     @Operation(summary = "Get a doc", description = "Get a document from data store")
@@ -25,7 +25,7 @@ public interface GreetingResourceApi {
                                     schema = @Schema(implementation = String.class))),
                     @APIResponse(ref = Constants.Responses.GENERAL_400),
             })
-    public Response getDocument(
+    Response getDocument(
             @Parameter(name = "raw", ref = Constants.Parameters.RAW)
             final boolean raw,
             @Parameter(in = ParameterIn.QUERY, name = "sort", description = "Keys to sort by")
