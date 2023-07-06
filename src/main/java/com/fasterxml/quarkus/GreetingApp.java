@@ -1,17 +1,14 @@
 package com.fasterxml.quarkus;
 
+import jakarta.ws.rs.core.Application;
 import org.eclipse.microprofile.openapi.annotations.Components;
 import org.eclipse.microprofile.openapi.annotations.OpenAPIDefinition;
 import org.eclipse.microprofile.openapi.annotations.enums.ParameterIn;
 import org.eclipse.microprofile.openapi.annotations.info.Info;
-import org.eclipse.microprofile.openapi.annotations.media.Content;
-import org.eclipse.microprofile.openapi.annotations.media.ExampleObject;
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
 import org.eclipse.microprofile.openapi.annotations.parameters.Parameter;
 import org.eclipse.microprofile.openapi.annotations.responses.APIResponse;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
-
-import javax.ws.rs.core.MediaType;
 
 @OpenAPIDefinition(
         // note that info is defined via the properties
@@ -36,5 +33,5 @@ import javax.ws.rs.core.MediaType;
                 }
         )
 )
-public class GreetingApp extends javax.ws.rs.core.Application {
+public class GreetingApp extends Application {
 }
